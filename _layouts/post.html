@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="box-halfLeft ">
+  <div class="a-slide">
+    <h1>{{ page.title }}</h1>
+    <p>{{ content }}</p>
+  </div>
+</div>
+<div class="box-halfRight postMenu a-fade">
+  {% include nav.html %}
+</div>
+<div class="box-full a-fade">
+  <img src="{{ page.img | prepend: site.baseurl }}" alt="{{ page.title }}">
+</div>
+
+{% if page.previous %}
+  <a href='{{ page.previous.url}}' class="box-halfLeft postNav postNav-left">
+    <p>« {{ page.previous.title }}</p>
+  </a>
+{% endif %}
+
+{% if page.next %}
+  <a href='{{ page.next.url }}' class="box-halfRight postNav postNav-right">
+    <p>{{ page.next.title }} »</p>
+  </a>
+{% endif %}

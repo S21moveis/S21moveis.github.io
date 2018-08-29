@@ -1,0 +1,19 @@
+---
+type: index
+layout: default
+---
+
+<div class="box-halfLeft">
+  <img src="{{ '/img/logo-index.png' | prepend: site.baseurl }}" alt="">
+</div>
+
+<div class="box-halfRight box-alpha">
+  <h1>Porque não uma poltrona?</h1>
+  <blockquote>Nossa casa é o reflexo de quem somos. Poltronas são ótimas em expressar nossa personalidade: elas tem vários tamanhos, podem ter várias cores e cabem facilmente na sua sala.</blockquote>
+
+  <p>É assim que criamos nossos móveis. Temos uma cartela bem variada de tecidos que conseguem confortavelmente se adequar a sua sala. E pra melhorar, nossa estética serve ao conforto. Além da beleza, dá pra ficar um bom tempo assistindo um filme, vendo o Facebook ou lendo livro em qualquer um dos nossos móveis.</p>
+
+  {% for post in site.posts limit: 1 %}
+    <a href="{{ post.url }}" class="button">Conheça nossos produtos!</a>
+  {% endfor %}
+</div>
