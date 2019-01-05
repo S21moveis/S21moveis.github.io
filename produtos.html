@@ -1,0 +1,15 @@
+---
+layout: page
+title: Confira nossos produtos
+permalink: /produtos/
+---
+
+<div class="produtos">
+  {% for post in site.posts %}
+    <div class="produtos--card">
+      <h2 class="produtos--card__title">{{ post.title }}</h2>
+      <div class="produtos--card__img">
+        <img src="{{ post.img }}" alt="">
+      </div>
+    </div>
+  {% endfor %}

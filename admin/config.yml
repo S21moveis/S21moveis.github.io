@@ -17,3 +17,23 @@ collections:
       - {label: "Nome do produto", name: "title", widget: "string"}
       - {label: "Imagem", name: "img", widget: "image"}
       - {label: "Medida", name: "body", widget: "markdown"}
+  - name: "tecidos" # Used in routes, e.g. /admin/collections/blog
+    label: "Tecidos" # Used in the UI
+    folder: "_tecidos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Nome do Tecido", name: "title", widget: "string"}
+      - {label: "Imagem", name: "img", widget: "image"}
+      - {label: "Código", name: "body", widget: "markdown"}
+  - name: "acabamentos" # Used in routes, e.g. /admin/collections/blog
+    label: "Acabamentos" # Used in the UI
+    folder: "_acabamentos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Acabamento", name: "title", widget: "string"}
+      - {label: "Imagem", name: "img", widget: "image"}
+      - {label: "Código", name: "body", widget: "markdown"}

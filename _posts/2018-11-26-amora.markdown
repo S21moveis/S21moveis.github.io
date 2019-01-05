@@ -1,0 +1,6 @@
+---
+layout: post
+title: Amora
+img: "/img/amora.jpg"
+---
+L82 P71 A92

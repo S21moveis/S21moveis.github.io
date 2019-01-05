@@ -1,4 +1,16 @@
 </body>
   <script src="{{ '/js/swup.js' | prepend: site.baseurl }}"></script>
   <script> var swup = new Swup() </script>
+  <script type="text/javascript">
+    function showLinks() {
+      var x = document.getElementById("nav--showOnClick");
+      if (x.style.opacity === "1") {
+        x.style.opacity = "0";
+        x.style.height = "0";
+      } else {
+        x.style.opacity = "1";
+        x.style.height = "4 rem";
+      }
+    }
+  </script>
 </html>

@@ -1,0 +1,6 @@
+---
+layout: post
+title: Manacá
+img: "/img/manaca.jpg"
+---
+A82 P67 L67

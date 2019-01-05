@@ -1,0 +1,6 @@
+---
+layout: post
+title: Lotus
+img: "/img/lotus.jpg"
+---
+A83 L73 P72

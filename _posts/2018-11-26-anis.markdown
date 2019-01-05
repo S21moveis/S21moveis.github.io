@@ -1,0 +1,6 @@
+---
+layout: post
+title: Anis
+img: "/img/anis.jpg"
+---
+A85 L76 P72

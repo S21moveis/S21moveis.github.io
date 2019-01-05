@@ -1,6 +1,5 @@
 ---
 ---
-
 :root {
   --texto-cinza: rgb(42, 103, 136);
   --brancoAlpha: rgba(255, 255, 255, .7);
@@ -18,7 +17,9 @@
   box-sizing: border-box;
 }
 
-a {text-decoration: none;}
+a {text-decoration: none; color: var(--titulo-azul);}
+
+a:hover{ color: var(--textoTecido-cinza); }
 
 *:hover{ 
   text-decoration: none;
@@ -38,7 +39,10 @@ h1, h2, h3, h4 {
   font-family: Unna, serif;
 }
 
-
+p {
+  max-width: 38rem;
+  margin-bottom: 1rem;
+}
 
 /* Main Layout */
 
@@ -54,24 +58,16 @@ h1, h2, h3, h4 {
 
 .main > .box-halfRight {
   grid-column: 8/14;
+  z-index: 1000;
+}
+
+.box-full {
+  grid-column: 2/14;
+  z-index: -100;
 }
 
 img {
   width: 100%;
-}
-
-.button {
-  background: var(--texto-cinza);
-  color: var(--brancoAlpha);
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 2px;
-  box-shadow: 4px 4px 2px rgba(0,0,0,.3);
-}
-
-.button:hover {
-  background: var(--titulo-azul);
-  box-shadow: none;
 }
 
 /* Header */
@@ -81,21 +77,64 @@ img {
 .postMenu {
   background: url({{ '/img/bg-index.jpg' | prepend: site.baseurl }});
   background-size: cover; 
+  height: 100px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-.postMenu >.button {
+.postMenu > .button {
   margin: 1rem auto 1rem 1rem;
 }
 
-.brand {
+.nav--brand {
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.brand > img {
+.nav--brand > img {
   height: 60px;
+  width: auto;
+}
+
+/* Navigation */
+
+.nav {
+  margin-top: 2rem;
+}
+
+.nav--button, .index--button, .nav--button a {
+  background: var(--texto-cinza);
+  color: var(--brancoAlpha);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  box-shadow: 4px 4px 2px rgba(0,0,0,.3);
+  text-align: center;
+}
+
+.nav--button:hover, .index--button:hover {
+  background: var(--titulo-azul);
+  color: var(--brancoAlpha);
+  box-shadow: none;
+}
+
+#nav--showOnClick {
+  transform: ease .5s;
+  opacity: 0;
+  background: var(--titulo-azul);
+  margin-top: 1.5rem;
+}
+
+.nav--showOnClick {
+  padding: .5rem;
+  list-style: none;
+  border-bottom: 1px solid var(--bg-azulClaro);
+  border-top: 1px solid var(--bg-azulClaro);
+  color: var(--bg-azulClaro);
+}
+
+#nav--showOnClick li a {
+  color: var(--bg-azulClaro);
 }
 
 /* Index Layout */
@@ -123,25 +162,19 @@ img {
 }
 
 .box-alpha > a {
-  font-family: Unna;
+  font-family: Unna, serif;
   font-size: 1.4rem;
-}
-
-/* Produtos Layout */
-
-
-.box-full {
-  grid-column: 2/14;
 }
 
 /* Navegação dos produtos */
 
-.postNav {
+.postNav-left, .postNav-right {
   background: var(--brancoAlpha);
-  padding: 1rem;
+  padding: .4rem;
   margin-bottom: 1rem;
-  width: 100%;
   cursor: pointer;
+  position: fixed;
+  top: 50%;
 }
 
 .postNav:hover {
@@ -153,27 +186,88 @@ img {
   margin-right: 3px;
   box-shadow: -3px 1px 4px rgba(0,0,0,.3);
   text-align: left;
+  left: 1.5rem;
 }
 
 .postNav-right {
   margin-left: 3px;
   text-align: right;
   box-shadow: 3px 1px 4px rgba(0,0,0,.3);
+  right: 1.5rem;
 }
 
+.shown {
+  width: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hidden {
+  background: var(--brancoAlpha);
+  position: fixed;
+  top: 50%;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.hidden-left {
+  left: 5rem;
+}
+
+.hidden-right {
+  right: 5rem;
+}
+
+.postNav:hover .hidden {
+  opacity: 1;
+}
+
+/* Páginas com grids */
+
+.acabamento, .produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-column-gap: .5rem;
+}
+
+.acabamento--card, .produtos--card {
+  margin-top: .5rem;
+}
+
+.acabamento--title, .produtos--title {
+  grid-column: 1/-1;
+  margin-top: 1rem;
+}
+
+.acabamento--card__title, .produtos--card__title {
+  font-size: 1rem;
+  font-family: Chivo, sans;
+}
+
+.acabamento--card__img, .produtos--card__img {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+}
+
+/* SWUP */
+
 .a-fade {
-    transition: 3s;
-    opacity: 1;
+  transition: 3s;
+  opacity: 1;
 }
 
 html.is-animating .a-fade{
-    opacity: 0;
+  opacity: 0;
 }
 
 .a-slide {
   transition: 3s;
+  opacity: 1;
 }
 
 html.is-animating .a-slide {
   transform: translate3d(0, 120%, 0);
+  opacity: 0;
 }

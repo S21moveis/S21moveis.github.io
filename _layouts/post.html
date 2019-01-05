@@ -16,13 +16,19 @@ layout: default
 </div>
 
 {% if page.previous %}
-  <a href='{{ page.previous.url}}' class="box-halfLeft postNav postNav-left">
-    <p>« {{ page.previous.title }}</p>
-  </a>
+  <div class="postNav">
+    <a href='{{ page.previous.url}}' class="postNav-left">
+      <p class="shown">«</p>
+    </a>
+    <p class="hidden hidden-left">{{ page.previous.title }}</p>
+  </div>
 {% endif %}
 
 {% if page.next %}
-  <a href='{{ page.next.url }}' class="box-halfRight postNav postNav-right">
-    <p>{{ page.next.title }} »</p>
-  </a>
+  <div class="postNav">
+    <a href='{{ page.next.url }}' class="postNav-right">
+      <p class="shown">»</p>
+    </a>
+    <p class="hidden hidden-right">{{ page.next.title }}</p>
+  </div>
 {% endif %}

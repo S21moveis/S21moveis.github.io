@@ -1,0 +1,43 @@
+---
+layout: page
+title: Tecidos & Acabamentos
+permalink: /tecidos/
+---
+
+<div class="acabamento">
+<h1 class="acabamento--title">Acabamentos</h1> 
+{% for tecido in site.tecidos %}
+  {% if tecido.type == 'Acabamentos' %}
+  <div class="acabamento--card">
+    <h2 class="acabamento--card__title">{{ tecido.title }}</h2>
+    <div class="acabamento--card__img">
+      <img src="{{ tecido.img }}" alt="">
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+
+<h1 class="acabamento--title">Tecidos básicos</h1> 
+{% for tecido in site.tecidos %}
+  {% if tecido.type == 'Tecidos básicos' %}
+  <div class="acabamento--card">
+    <h2 class="acabamento--card__title">{{ tecido.title }}</h2>
+    <div class="acabamento--card__img">
+      <img src="{{ tecido.img }}" alt="">
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+
+<h1 class="acabamento--title">Tecidos especiais</h1> 
+{% for tecido in site.tecidos %}
+  {% if tecido.type == 'Tecidos especiais' %}
+  <div class="acabamento--card">
+    <h2 class="acabamento--card__title">{{ tecido.title }}</h2>
+    <div class="acabamento--card__img">
+      <img src="{{ tecido.img }}" alt="">
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+</div>

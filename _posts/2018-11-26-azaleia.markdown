@@ -1,0 +1,6 @@
+---
+layout: post
+title: Azaleia II
+img: "/img/azaleia.jpg"
+---
+A78 L68 P68

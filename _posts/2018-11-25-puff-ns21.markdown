@@ -1,0 +1,6 @@
+---
+layout: post
+title: Puff Ns21
+img: "/img/puff-ns21.jpg"
+---
+A43 L38 C38

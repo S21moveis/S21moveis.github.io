@@ -1,0 +1,21 @@
+/*
+Theme Name: OhMyEma
+Author: Gustavo Nering
+Description: Built for joy
+Version: 0.0.1
+*/
+
+*, ::after, ::before, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --azul: #00bcc9;
+  --azulClaro: #87d2de;
+  --azulEscruro: #000337;
+  --laranja: #f05a28;
+  --vermelho: #ee3428;
+  --amarelo: #ffce7a;
+}

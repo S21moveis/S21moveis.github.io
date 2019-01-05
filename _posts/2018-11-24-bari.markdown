@@ -1,0 +1,6 @@
+---
+layout: post
+title: Bari
+img: "/img/bari.jpg"
+---
+A96 L49 P59

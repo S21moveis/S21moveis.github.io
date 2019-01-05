@@ -1,0 +1,6 @@
+---
+layout: post
+title: Dracena
+img: "/img/dracena.jpg"
+---
+A82 L60 P73

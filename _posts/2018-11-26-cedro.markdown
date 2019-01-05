@@ -1,0 +1,6 @@
+---
+layout: post
+title: Cedro
+img: "/img/cedro.jpg"
+---
+A83 L64 P64
