@@ -2,17 +2,19 @@
 layout: default
 ---
 
-<div class="box-halfLeft ">
-  <div class="a-slide">
-    <h1>{{ page.title }}</h1>
-    <p>{{ content }}</p>
-  </div>
+
+<div a-slide">
+  <a class="medidas" href="#medidas">Medidas</a>
 </div>
-<div class="box-halfRight postMenu a-fade">
-  {% include nav.html %}
-</div>
+
 <div class="box-full a-fade">
   <img src="{{ page.img | prepend: site.baseurl }}" alt="{{ page.title }}">
+
+  <div id="medidas">
+    <h1>{{ page.title }}</h1>
+    <p>{{ content }}</p>
+
+  </div>
 </div>
 
 {% if page.previous %}
@@ -32,3 +34,7 @@ layout: default
     <p class="hidden hidden-right">{{ page.next.title }}</p>
   </div>
 {% endif %}
+
+<div class="menu postMenu a-fade">
+  {% include nav.html %}
+</div>

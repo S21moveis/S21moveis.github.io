@@ -1,9 +1,10 @@
 <div class="nav">
+  <div id="showOnClick" class="nav--showOnClick">
+    <li class="nav--showOnClick__item"><a href="{{ site.baseurl }}/produtos/">Produtos</a></li>
+    <li class="nav--showOnClick__item"><a href="{{ site.baseurl }}/tecidos/">Tecidos</a></li>
+    <li class="nav--showOnClick__item"><a href="{{ site.baseurl }}/quem-somos/">Quem somos</a></li>
+  </div>
+
   <a class="nav--button" href="javascript:void(0);" onclick="showLinks()">Menu</a>
-    <div id="nav--showOnClick">
-      <li class="nav--showOnClick"><a href="{{ site.baseurl }}/produtos/">Produtos</a></li>
-      <li class="nav--showOnClick"><a href="{{ site.baseurl }}/tecidos/">Tecidos</a></li>
-      <li class="nav--showOnClick"><a href="{{ site.baseurl }}/quem-somos/">Quem somos</a></li>
-    </div>
 </div>
 <div class="nav--brand"><img src="{{ '/img/logo-index.png' | prepend: site.baseurl }}" alt=""></div>

@@ -8,8 +8,10 @@ permalink: /produtos/
   {% for post in site.posts %}
     <div class="produtos--card">
       <h2 class="produtos--card__title">{{ post.title }}</h2>
-      <div class="produtos--card__img">
-        <img src="{{ post.img }}" alt="">
-      </div>
+      <a class="produtos--card__img" href="{{ post.url }}">
+        <div class="produtos--card__hover">
+          <img src="{{ post.img }}" alt="">
+        </div></a>
     </div>
   {% endfor %}
+</div>
