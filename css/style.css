@@ -55,14 +55,15 @@ p {
 }
 
 .main > .box-halfLeft {
-
   align-self: end;
   padding-bottom: 1rem;
+  padding: 3rem;
+  grid-column: 2/3;
 }
 
 .main > .box-halfRight {
-
   z-index: 1000;
+  grid-column: 3/4;
 }
 
 .box-full {
@@ -87,6 +88,7 @@ img {
 
 .menu {
   position: sticky;
+  position: -webkit-sticky;
   bottom: 0rem;
   box-shadow: 0px -4px 5px rgba(0,0,0,.4);
 }
@@ -159,6 +161,11 @@ img {
 
 /* Produtos */
 
+#medidas {
+  margin-left: 6rem;
+  margin-bottom: 2rem;
+}
+
 .medidas {
   font-size: .8rem;
   text-transform: uppercase;
@@ -186,6 +193,8 @@ img {
   -webkit-background-size: cover;
   background-size: cover;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 2rem auto auto 2rem;
 }
 
 .main-index > .box-halfLeft,
